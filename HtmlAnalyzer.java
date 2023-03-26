@@ -1,28 +1,25 @@
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
+import java.io.IOException;
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class HtmlAnalyzer {
 
     public static void main(String[] args)
     {
-        String url = args[0];
-        String resposta = lerHTML(url);
-        System.out.println(resposta);
-
-    }
-    public static String lerHTML(String url){
-        HttpClient client = HttpClient.newHttpClient();
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(url)).GET()
-                .build();
         try {
-            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-            return response.body();
+            String url = args[0];
+            HtmlReader reader = new HtmlReader(url);
+            String resposta = reader.getHTML();
 
-        }catch(Exception e) {
-            throw new RuntimeException("Erro ao ler o conteúdo da URL: " + e.getMessage());
+            HtmlOperations operations = new HtmlOperations(resposta);
+            operations.process();
+            String lastText = operations.getText();
+            System.out.println(lastText);
+        } catch(HtmlReaderException | IOException | InterruptedException e) {
+            System.out.println("URL connection error");
+        } catch(MalformedHtmlException e) {
+            System.out.println(e.getMessage());
         }
     }
 }

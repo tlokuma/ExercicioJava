@@ -1,2 +1,1 @@
-# Axur---Teste-prático
-Teste proposto pela empresa Axur como etapa do processo de contratação para estágio 
+      EASTER_EGG_URLS
