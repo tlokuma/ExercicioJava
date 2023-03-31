@@ -32,7 +32,7 @@ c. Trecho de texto (exemplo: “Este é o corpo.”)
 fechamento são utilizados (exemplo: <div> e </div>, mas
 não <br/>)
 5. Tags de abertura não possuem atributos (contra-exemplo:
-<a href=”link.html”>).
+<a href=”link”>).
 Cada linha pode ou não ter espaços iniciais, utilizados meramente
 para indentação, que devem ser ignorados. Linhas em branco
 também devem ser ignoradas.
