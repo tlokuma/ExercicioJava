@@ -20,13 +20,15 @@ Para simplificar o escopo do problema, a solução deve se basear nas seguintes 
 2. Cada linha pode ser apenas de um dos seguintes tipos:
 a. Tag de abertura 
 b. Tag de fechamento 
-c. Trecho de texto (exemplo: “Este é o corpo.”)
+c. Trecho de texto 
 3. Uma mesma linha não pode conter dois tipos de conteúdo;
 4. Apenas elementos HTML com pares de tags de abertura e fechamento são utilizados 
 5. Tags de abertura não possuem atributos 
 Cada linha pode ou não ter espaços iniciais, utilizados meramente para indentação, que devem ser ignorados. Linhas em branco também devem ser ignoradas.
 Opcional: pontos bônus serão concedidos caso a solução seja capaz de identificar estruturas HTML mal-formadas, retornando nesse caso a mensagem “malformed HTML” (sem as aspas).
+
 Requisitos técnicos
+
 1. A solução deve ser desenvolvida como um programa Java a ser compilado e executado pela linha de comando, utilizando o JDK 17.
 2. Não é permitido o uso de quaisquer bibliotecas e frameworks externos ao JDK. Também não é permitido o uso de packages e classes nativos do JDK relacionados à manipulação de HTML, XML ou DOM (como javax.xml ou quaisquer outros).
 3. Para a compilação do programa deve ser suficiente executar o seguinte comando a partir do diretório que contém o(s) arquivo(s) de código fonte, sem quaisquer alterações: javac HtmlAnalyzer.java
