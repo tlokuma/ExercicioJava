@@ -63,4 +63,3 @@ b. Mensagem “malformed HTML“ (caso implementada
 funcionalidade que vale pontos bônus); ou
 c. Mensagem “URL connection error“ (caso não seja
 possível obter o conteúdo HTML por falha de conexão).
-
